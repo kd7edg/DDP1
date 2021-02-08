@@ -1,0 +1,21 @@
+---
+title: 'Peer-graded Assignment: R Markdown and Leaflet'
+author: "Julio Camara"
+date: "2/7/2021"
+output: html_document
+---
+
+## R Markdown
+
+Created on Feb 7, 2021. 
+
+This is an R Markdown document that demonstrates how to create a simple map with leaflet.
+```{r map}
+library(leaflet)
+map <- leaflet() %>% addTiles() 
+map <- map %>% 
+  addMarkers(lat = 28.474797, lng = -81.466237, popup="Universal Studios Florida") %>%
+  addMarkers(lat = 28.411130, lng = -81.460867, popup="SeaWorld Orlando") %>%
+  addMarkers(lat = 28.417132, lng = -81.581146, popup="Disney World")
+map
+```
